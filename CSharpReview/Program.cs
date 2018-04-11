@@ -10,6 +10,13 @@ namespace CSharpReview
     {
         static void Main(string[] args)
         {
+            
+        }
+
+        public static string GetUserInput(string prompt)
+        {
+            Console.WriteLine(prompt);
+            return Console.ReadLine();
         }
     }
 }
