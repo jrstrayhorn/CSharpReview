@@ -12,11 +12,5 @@ namespace CSharpReview
         {
             
         }
-
-        public static string GetUserInput(string prompt)
-        {
-            Console.WriteLine(prompt);
-            return Console.ReadLine();
-        }
     }
 }
