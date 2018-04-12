@@ -23,7 +23,21 @@ namespace CSharpReview
             Console.WriteLine($"duration: {duration}");
 
             // properties
-            
+            Console.WriteLine("Minutes: " + timeSpan.Minutes);
+            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+
+            // timespan is immutable, need to use methods to change
+            // add
+            Console.WriteLine("Add example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+
+            // sub
+            Console.WriteLine("Subtract example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+
+            // tostring
+            Console.WriteLine("ToString" + timeSpan.ToString());
+
+            // parse
+            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
         }
     }
 }
