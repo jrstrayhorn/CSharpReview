@@ -1,1 +1,35 @@
-﻿
+﻿Constructors
+
+What is it?
+	- A method that is called when an instance of an object 
+	is created
+
+Why?
+	- to put a class in an early state, with initial state
+
+How?
+	public class Customer
+	{
+		// parameter less constructor
+		public Customer()
+		{
+			// required initialization
+		}
+
+		// if you don't provide a constructor
+		// compiler will add one for you.
+		// and initializes fields for value type to default
+		// char to empty char
+		// ref types to null
+	}
+
+	this references the current object
+	public class Customer
+	{
+		public string Name;
+
+		public Customer(string name)
+		{
+			this.Name = name; // this makes sure we set members of class
+		}
+	}
