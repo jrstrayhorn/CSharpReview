@@ -1,0 +1,91 @@
+﻿**Class
+	- A building block of an application
+
+An Application is made up of many classes
+providing the behavior of an application
+
+
+Real World Example (Web App Blog Engine)
+
+Presentation Layer
+	PostView resposible for displaying a post
+
+Business Logic / Domain
+	Post
+
+Data Access / Persistence
+	PostRepository - how to save/load post to db
+
+Real World App could have 100 to 1000s of classes
+
+**Anatomy of a Class
+	- Data (represented by fields)
+	- Behavior (represented by methods / functions)
+
+UML Class
+	Person
+
+Fields
+	Name: string
+	Age: byte
+	Height: float
+	Weight: byte
+Methods
+	Walk()
+	Talk()
+	Eat()
+	Sleep()
+
+	Post
+
+	Title: string
+	Description: string
+	DateTime: DatTime
+
+	Publish()
+	Post()
+	Comment(message)
+
+**Object
+	- An instance of a class
+	- Created in memory
+	- Class is blueprint
+	- In memory - classes collaborate with one another
+
+Declaring Classes
+	- each class needs a name
+	- use Pascal Case (1st letter of every word is UpperCase)
+	- use camel Case for parameters or methods
+
+public class Person
+{	// Properties
+	public string Name; // public - access modifer
+
+	// methods
+	// access modifier, signature (type), identifier, parameters
+	public void Introduce()  // signature of method
+	{
+		Console.WriteLine($"Hi, my name is {Name}");
+	}
+}
+
+Creating Objects
+Person person = new Person();
+var person = new Person();	// camel Case for variable
+
+Using Objects
+var person = new Person();
+person.Name = "JR"
+
+**Class Members
+	- Instance: accessible from an object
+	- Static: accessible from the class (not an object)
+		- don't need to create an object to call method
+
+Why use static members?
+	- To represent concepts that are singleton.
+	- DateTime.Now
+	- Console.WriteLine()
+
+Declaring Static Members
+	- use the static keyword
