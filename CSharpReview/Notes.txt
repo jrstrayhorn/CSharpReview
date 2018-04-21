@@ -1,1 +1,24 @@
-﻿
+﻿Object Initializers
+
+What?
+- A syntax for quickly initial an object without a construtor
+
+Why?
+- To avoid having multiple construtors
+
+How?
+public class Person
+{
+	public int Id;
+	public string FirstName;
+	public string LastName;
+	public DateTime BirthDate
+}
+
+var person = new Person
+	{
+		FirstName = "JR",
+		LastName = "Strayhorn"
+	};
+
+
