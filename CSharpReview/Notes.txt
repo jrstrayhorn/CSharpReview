@@ -1,1 +1,32 @@
-﻿
+﻿Properties
+
+What?
+	A class member that encapsulates a getter/setter for a field
+
+Why?
+	to create getter/setter with less code
+
+HOw?
+	public class Person
+	{
+		// private backing field
+		private DateTime _birthdate;
+
+		public DateTime Birthdate
+		{
+			get { return _birthdate; }
+			set { _birthdate = value; }
+		}
+
+	}
+
+	PascalCase in most cases - Class Name, properties, emthod
+
+	CamelCase for private fiels with an _, method parameters
+
+	Auto-implemented Properties
+
+	public class Person
+	{
+		public DateTime Birthdate { get; set; }  // compiler will automatically create private backing field for us
+	}
