@@ -1,1 +1,76 @@
-﻿
+﻿Methods
+
+- Signature of Methods
+	- Name (Move)
+	- Number and Type of parameters (2, int)
+
+	public class Point
+	{
+		public void Move(int x, int y) {}
+	}
+
+- Method Overloading
+	- Having a method with the same name but diff signatures
+
+	public class Point
+	{
+		public void Move(int x, int y) {}
+
+		public void Move(Point newLocation) {}
+
+		public void Move(Point newLocation, int speed) {}
+	}
+
+
+- Params modifier
+
+public class Calculator
+{
+	public int Add(int[] numbers) {}
+}
+
+OR
+
+public int Add(params int[] numbers) {}
+
+// allows us to add an array or any number of parameters
+
+- Ref modifier (bad things.. LOL)
+
+public class MyClass
+{
+	public void MyMethod(int a)
+	{
+		a += 2;
+	}
+}
+
+var a = 1;
+myClass.MyMethod(a); // a is still 1
+
+public class MyClass
+{
+	public void MyMethod(ref int a)
+	{
+		a += 2;
+	}
+}
+
+var a = 1;
+myClass.MyMethod(ref a); // a is now 3; don't do this though
+
+- Out modifier (bad things.. LOL
+
+public class MyClass
+{
+	public void MyMethod(out int result)
+	{
+		result = 1;
+	}
+}
+
+int a;
+myClass.MyMethod(out a);
+
+// allow value to be set outside the method
+// don't use this
