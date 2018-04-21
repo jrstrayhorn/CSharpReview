@@ -1,1 +1,31 @@
-﻿
+﻿Fields
+
+Fields is a variable that is declared at the class level
+
+- Initialization
+
+public class Customer
+{
+	List<Order> Orders;
+
+	public Customer()
+	{
+		Orders = new List<Order>();
+	}
+}
+
+// we can have multiple constructors and ordder fields will always be initialized
+public class Customer
+{
+	List<Order> Orders = new List<Order>();
+}
+
+- Read only Fields - will only be assigned once
+
+public class Customer
+{
+	readonly List<Order> Orders = new List<Order>();
+}
+
+// this increases robustness
+// orders list will only be created once and can't be reinitialized
