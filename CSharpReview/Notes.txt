@@ -1,1 +1,72 @@
-﻿
+﻿Access Modifiers
+
+- Public
+
+- Private
+
+- Protected
+
+- Internal
+
+- Protected Internal
+
+What?
+	A way to control access to a class or it's members
+
+Why?
+	To create safety in our programs (like readonly modifier)
+
+How?
+	public class Customer
+	{
+		private string Name;
+	}
+
+	var john = new Customer();
+	john.Name; // won't compile
+
+
+This is for OOP
+	- **Encapsulation / Information Hiding**
+	- Inheritance
+	- Polymorphism
+
+
+Like a resturant, several roles, cahsier, manager, waiters, cooks, etc
+	they all collaborate with one another
+	interactions
+	Waiters takes order
+	Chef reads order, cooks
+	Waiter picks up order takes to table
+
+	Each roles has knowledge and capabilities
+
+	In software classes are doing the same thing to perform responsibility of application
+
+	Classes should do ONE thing perfectly!!
+
+	Some classes should have knowledge/data or behavior that should be hidden to outside
+
+Encapsulation (in practice)
+- Define fields as private
+
+-Provide getter/setter methods as public
+
+Fields are implementation details that other classes shouldn't know about
+
+public class Person // PascalCase  private fields _ 
+{
+	priavte string _name;  // PascalCase
+
+	public void SetName(string name) // parameters are camelCase
+	{
+		if (!String.IsNullOrEmpty(name))  // can check if valid (logic)
+			this._name = name;
+	}
+
+	pbulic string GetName()
+	{
+		return _name;
+	}
+}
+
