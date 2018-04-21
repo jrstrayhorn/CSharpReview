@@ -33,3 +33,17 @@ How?
 			this.Name = name; // this makes sure we set members of class
 		}
 	}
+
+	var customer = new Customer("Mike");
+
+Constructor Overloading
+- same different method signatures
+
+public class Customer
+{
+	public Customer() { ... }
+
+	public Customer(string name) { ... }
+
+	public Customer(int id, string name) { ... }
+}
