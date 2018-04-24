@@ -1,1 +1,35 @@
-﻿
+﻿Indexers
+
+What?
+	A way to access elements in a class that represents a list of values.
+
+Examples
+
+var array = new int[5];
+array[0] = 1;  // this is an indexer
+
+var list = new List<int>();
+list[0] = 1;  /// this is an indexer
+
+
+Example
+
+var cookie = new HttpCookie();
+cookie.Expire = DateTime.Today.AddDays(5);
+
+cookie["name"] = "JR";  // this is an indexer
+cookie.SetItem("name", "Mosh"); // w/o indexer, you have to do this
+
+var name = cookie["name"];  // this is an indexer
+var name = cookie.GetItem("name"); 
+
+How to define an indexer?
+
+public class HttpCookie
+{
+	public string this[string key]
+	{
+		get { ... }
+		set { ... }
+	}
+}

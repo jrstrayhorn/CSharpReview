@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSharpReview
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            
+            var cookie = new HttpCookie();
+            cookie["name"] = "JR";
+            Console.WriteLine(cookie["name"]);
         }
     }
 }
