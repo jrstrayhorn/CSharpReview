@@ -1,1 +1,39 @@
-﻿
+﻿What is Inheritance?
+	- A kind of relationship between two classes that allows one to inherit
+		code from the other.
+	- Is-A
+	- Example: A Car is a Vehicle
+
+Benefits
+	- Code re-use
+	- Polymorphic behavior
+
+PowerPoint
+	- Could create classes for each object Shape, Image, Text, Table
+	- Don't want to rewrite similar behavior between each of these Presentation Objects
+
+	SO....
+
+	Classes for PowerPoint
+
+	PresentationObject (Parent/Base Class/Superclass)
+		Text (Child/Derived/Subclass)
+		Table (Child)
+		Image (Child)
+
+	In C# a class can have only 1 base/parent class.
+
+	Object is the parent of all classes in .NET (automatically)
+		so you get methods like Equals, GetType, GetHashCode, ToString on all objects
+
+Syntax
+
+public class PresentationObject
+{
+	// Common shared code
+}
+
+public class Text : PresentationObject
+{
+	// Code specific to Text
+}
