@@ -1,1 +1,31 @@
-﻿
+﻿What is Composition?
+	- A kind of relationship between two classes that allows one to contain the other
+	- Has-a relationship
+	- Example: Car has an Engine
+
+Benefits
+	- Code re-use
+	- Flexiblity
+	- Means to loose-coupling
+
+Example
+	- DbMigrator requires logging.  // copying database, tables, views, etc
+	- Installer requires logging.   // install application
+		Logging is common between both class
+
+			DbMigrator > Logger
+
+			Installer > Logger
+
+Syntax
+
+public class Installer
+{
+	private Logger _logger;
+
+	// related class is a private field in composite class
+	public Installer(Logger logger)
+	{
+		_logger = logger;
+	}
+}
