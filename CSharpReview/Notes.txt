@@ -1,1 +1,30 @@
-﻿
+﻿What is Coupling?
+	A measure of how interconnected classes and subsystem are
+
+Application
+	If Class A is coupled with ClassF and ClassB,
+		Change in ClassA might change ClassF and ClassB
+		This could have a BIG impact on the application
+
+Tightly Coupled Design
+	Class are tightly coupled are bad because you can break things
+
+Loose Coupled
+	This helps minimize changes, so changes can be isolated
+
+But how?
+	You need to understnad
+		- Encapsulation 
+			(hiding implementation details, 
+			putting correct responsibilities, 
+			capabilities, data/knowledge and abilities into correct classes)
+			No class knows about the implementation details of another class
+			via access modifiers
+		- The relationships between classes
+		- Interfaces
+
+Types of Relationships
+	- Inheritance
+	- Composition - result in less coupling
+
+Favor Composition Over Inheritance
