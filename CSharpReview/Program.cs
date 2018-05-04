@@ -11,7 +11,25 @@ namespace CSharpReview
     {
         static void Main(string[] args)
         {
-            TryStopwatch();
+            //TryStopwatch();
+            TryPost();
+        }
+
+        private static void TryPost()
+        {
+            var post = new Post()
+            {
+                Title = "New Post",
+                Description = "Here is a new post."
+            };
+
+            post.UpVote();
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            post.DownVote();
+
+            Console.WriteLine($"Number of votes: {post.Votes}");
         }
 
         private static void TryStopwatch()
