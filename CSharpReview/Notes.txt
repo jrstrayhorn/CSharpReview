@@ -9,7 +9,7 @@ Benefits
 	- Means to loose-coupling
 
 Example
-	- DbMigrator requires logging.  // copying database, tables, views, etc
+	- DbMigrator requires logging.  // crud database, tables, views, etc
 	- Installer requires logging.   // install application
 		Logging is common between both class
 
@@ -29,3 +29,5 @@ public class Installer
 		_logger = logger;
 	}
 }
+
+Favor composition over inheritane
