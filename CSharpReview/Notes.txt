@@ -1,1 +1,71 @@
-﻿
+﻿Favor Composition over Inheritance
+
+Code Reuse with Inheritance
+	PresentationObject
+		Text
+		Table
+		Image
+
+Code Reuse with composition
+	DbMigrater
+		Loggeer
+
+	Installer
+		Logger
+
+Problems with Inheritance
+	Easly abused by amateur designers
+	Large hierachies
+	Fragility
+	Tightly Coupled
+
+If you change parent class,
+	the child classes may need to be recompiled
+
+Also if you add a child class
+	they have to derive all the methods even if they don't need them
+
+Composition
+	Any Inheritance relatioship can be translated to Composition.
+
+	Person
+		have an Animal (Age: int, Eat(), Sleep())
+
+	Dog
+		have an Animal
+
+	Walkable (class)
+
+	then create composition allowing Person, Dog to use Walkable
+
+	If we add Goldfish it can have a relationship w/ Animal but NOT Walkable
+
+	If use inheritance Goldfish would have to have Walk()
+
+	If want Goldfish to swim, Swimmable, then create composition relationship
+		these changes won't affect any other classes
+
+Design classes so that change only effect that class and not other classes
+
+Encapsulate functionality and then tie them together via Composition then compose them together
+
+Benefits of Composition
+	Great flexibilty
+	Loose Coupling
+
+Coupling
+
+Summary (2 types)
+	Inheritance (is-a)
+	Composition (has-a)
+
+Inheritance
+	Pros: Code re-use, easier to understand
+	Cons: Tightly coupled, fragile, can be abused
+
+Composition
+	Pros: Code reu-se, loose coupling
+
+In heritiance is not necessarily a bad thing.
+
+You can use both Inheritance and Composition
