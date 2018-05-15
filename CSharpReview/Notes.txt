@@ -1,1 +1,24 @@
-﻿
+﻿Constructor Inheritnace
+- Base class constructors are always executed first.
+- Base class constructors are not inherited
+
+public class Vehicle
+{
+	private string _registrationNumber;
+
+	public Vehicle(string RegistrationNumber)
+	{
+		_registrationNumber = registrationNumber
+	}
+}
+
+public class Car : Vehicle
+{
+	public Car(string registrationNumber) : base(registrationNumber)  // this will call Vehicle class constructor
+	{
+		// this wont work _registrationHumber = registration
+		// wont work because private
+
+		// Initalize fields specific to the Car class
+	}
+}

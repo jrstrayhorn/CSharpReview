@@ -10,7 +10,7 @@ namespace CSharpReview
     {
         static void Main(string[] args)
         {
-            
+            var car = new Car("XYZ1234"); // this will create two lines with Vehicle and Car being initialzied, Vehicle 1st
         }
     }
 }
