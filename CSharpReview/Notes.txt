@@ -1,1 +1,45 @@
-﻿
+﻿ Black Box
+	don't know what's inside
+	limited visibility
+	design objects like black box
+	why?
+		so we can isolate changes
+		more you know aobut internals
+			more risk to put change into code base
+
+	Like a DVD player all you see is buttons and display
+		this is public interface
+
+	but there is lots going on under the hood
+
+Use Access Modifiers to control visibility in a class
+
+Public
+	Accessible from everywhere	
+		makes part of public interface
+
+Private
+	Accessible only from the class
+		example: private int CalculateRating()
+			this is implementation detail no need for other classes to know this
+
+Protected (bad design but used in .NET framework)
+	Accessbile only from the class and its derived classes
+	similar to private
+		if you derive a class, that method will be visible in derived class
+		cons: any class in heriarchy can see this method - this breaks encapsulation
+	Prefer to use private instead
+
+Internal
+	Accessible only from the same assembly
+	inside domain (assembly) its ok to see these implementation details
+		but not outside
+
+Protected Internal (most weird)
+	Accessible only from the same assembly or any derived classes
+	basically a mixture between protected and internal
+	this is BAD - don't use this
+
+
+
+
