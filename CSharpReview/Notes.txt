@@ -1,1 +1,42 @@
-﻿
+﻿Types in C#
+	1. Value types
+	2. Reference types
+
+Value Types
+	- Are stored on the stack.
+	- Have short life time, when doen off the stack
+	- Examples:
+		- All primitive types: byte, int, float, char bool
+		- The struct type
+
+Reference Types
+	- Are stored in the heap
+	- Examples:
+		- Any classes (Object, Array, String, DBMirgatart)
+
+An object reference can be implicitly converted to a base calss reference
+	Circle circle = new Circle();
+	Share
+
+the object clss is the base of all classes in .NET framework
+
+object shape = circle; / object reference implictly converted
+
+Boxing
+- The process of converting a value type instane to an object reference
+
+int number = 10;
+object obj = number;
+
+// or 
+object obj = 10;
+
+value gets boxed by CLR and stored in the HEAP instead of STACK
+
+Unboxing
+
+object obj = 10;
+int number = (int)obj; // new variable on the stack
+
+Boxing / Unboxing
+- have a performance penalty so try to avoid as possible
