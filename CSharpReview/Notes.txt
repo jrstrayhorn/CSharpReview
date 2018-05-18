@@ -1,1 +1,35 @@
-﻿
+﻿Upcasting (NOT Boxing and Unboxing LOL...)
+
+public class Shape
+{
+}
+
+public class Circle : Shape
+{
+}
+
+Circle circle = new Circle();
+Shape shape = circle;
+
+Downcasting
+
+Circle circle = new Circle();
+Shape shape = circle;
+
+Circle anotherCircle = (Circle)shape;
+Car car = (Car)shape; // throws InvalidCastException
+
+The as keyword
+Car car = (Car) obj;
+
+Car car = obj as Car;
+if (car != null)
+{
+}
+
+The is keyword
+
+if (obj is Car)
+{
+	Car car = (Car) obj;
+}
