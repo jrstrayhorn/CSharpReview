@@ -1,1 +1,31 @@
-﻿
+﻿Abstract Classes and Members
+
+Abstract Modifier
+	- Indicates that a class or a member is missing implementation
+	- only derived classes have implementation not base
+
+public abstract class Shape
+	public abstract void Draw() // this doesn't make sense, how to draw a shape? shape is too abstract
+		if you have abstract method then needs a abstract classs
+		abstract methods are already virtual
+
+public class Circle : Shape
+	public override void Draw()
+
+Abstract members
+	- do not include implementation
+	- if a member is declared as abstract, the containing class needs to be abstract too
+	- must implement all abstract members in the base abstract class
+
+Abstract Classes
+	- cannot be instantiated
+
+Why to use Abstract?
+	- When you want to provide some common behvaior, by following your design
+	- they have to provide implementation
+
+Benefits
+- Good to use whwn you want to force a certain style in program
+- Allow keeps concept to abstract from being instantiated
+
+
