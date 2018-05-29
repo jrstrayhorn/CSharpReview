@@ -10,7 +10,11 @@ namespace CSharpReview
     {
         static void Main(string[] args)
         {
-            
+            var sqlCommand = new DbCommand(new SqlConnection("sql connection string"), "select * from Customer");
+            sqlCommand.Execute();
+
+            var oracleCommand = new DbCommand(new OracleConnection("oracle connection string"), "select * from odbs.Members");
+            oracleCommand.Execute();
         }
     }
 }
