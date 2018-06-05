@@ -1,1 +1,29 @@
-﻿
+﻿What?
+
+- A language construct that is similar to class (in terms of syntax) but is fundamtentallly different
+
+Syntax
+
+public interface ITaxCalculator
+{
+	int Calculate()
+}
+
+interfaces have no implementation
+- no access modifiers
+
+Why?
+
+- To build loosely-coupled applications (components are not tightly related to each other)
+
+When building software we wan't complements/class that are loosely coupled
+
+OrderProcessor -> TaxCalculator (there is a dependency, has a TaxCalculator property)
+
+If you change taxcalculator it might affect OrderProcessor
+
+OrderProcessor -> ITaxCalculator
+	not depends on interface (just a declaration) not a concrete implementation
+
+now you can create diff implementations of ITaxCalculator
+
