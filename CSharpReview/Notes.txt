@@ -1,1 +1,29 @@
-﻿
+﻿Extensibility - is a software engineering and systems design principle where the 
+implementation takes future growth into consideration. The term extensibility can 
+also be seen as a systemic measure of the ability to extend a system and the level
+of effort required to implement the extension.
+
+Design so we can change behavior without changing the existing code, just add in new classes
+that change the way the software behaves.
+
+Then can write unit test just for those new class - impact is 0.
+
+Sometimes costly to implement - can't always change with extensibility mechanism
+
+But when you can you should develop with this in mind.
+
+This is OCP - Open Closed Principles
+
+DbMigrator is closed to modification but open to extension via Interface extension point
+
+Can use this for algorithms by creating an Interface and then create concrete implementation
+for initial solution and then can come back at a later time with a better solution
+and create a new concrete implementation
+
+For example
+
+GPS Class that DI IRouteFinder that gets the shortest route between two points,
+MyRouteFinder implements IRouteFinder with my original algorithm to do this
+later I find that Google Maps has a much better and faster algorithm for this
+then I would create a GoogleRouteFinder that implements IRouteFinder and use 
+this in the constructor instead of MyRouteFinder
