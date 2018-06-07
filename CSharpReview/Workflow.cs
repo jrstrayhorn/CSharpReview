@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharpReview
+{
+    public class Workflow
+    {
+        public IList<IActivity> Activities { get; }
+
+        public Workflow()
+        {
+            Activities = new List<IActivity>();
+        }
+    }
+}
