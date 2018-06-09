@@ -1,1 +1,28 @@
-﻿
+﻿Generics
+
+Generic create a class once and reuse it multiple places
+
+Generics have parameters defined with angle brackets <>
+
+You could have multiple parameters for generic <TKey, TValue>
+
+You can also set constrants for parameters of a generic
+
+C# Indexer
+
+Indexers allow instances of a class or struct to be indexed just like arrays.
+The indexed value can be set or retrieved without explictly specifying a type
+or instance member.  Indexers resemble properties except that their accessors
+take parameters.
+
+// assumes you have some sort of backing data structure to store list of 
+// Books like an array, you could then get and set this use
+
+// var bookList = new BookList();
+// var myBook = bookList[0];  // would use indexer to get first book in data structure
+
+public class BookList
+public Book this[int index]
+        {
+            get { throw new NotImplementedException(); }
+        }
