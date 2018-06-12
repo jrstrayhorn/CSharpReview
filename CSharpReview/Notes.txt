@@ -1,1 +1,11 @@
-﻿
+﻿What is a Lambda Expression?
+
+An anonymous method
+	- No access modifier
+	- No name
+	- No return statement
+
+Why do we use thme?
+
+For convenience
+
