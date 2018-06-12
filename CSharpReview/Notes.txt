@@ -1,1 +1,28 @@
-﻿
+﻿Delegates
+
+What is?
+	An object that knows how to call a method (or a group of methods)
+	A refrence / pointer to a function
+
+Why do we need this?
+- For designing extensing and flexible applications (eg frameworks)
+- Alternative: Interfaces
+
+Interfaces or Delegates?
+Use a delegate when
+- An eventing design pattern is used
+- The caller doesn't need to access other properties or methods on the 
+	object implementing the method.
+
+Very powerful for creating flexible and entensible programs or frameworks
+
+Every delegate is a class that derives from MultiCastDelegate -> Delegate 
+w/ Props of Method and Target (class)
+	_invocationList holds list of function pointers under the hood
+
+	MultiCastDelegate allows us to have multiple function pointers
+	Delegate holds just one function pointer
+
+.NET has two built in delegates that we can use (if we don't want to create our own)
+that are generics
+	Action and Func
