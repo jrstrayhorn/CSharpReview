@@ -38,7 +38,29 @@ namespace CSharpReview
 
             var books = new BookRepository().GetBooks();
 
+            // Find, FindAll needs a predicate, which is a generic
+            // that points to a method that takes in a T (whatever)
+            // and return a boolean if matched or not
+            // all Find, FindAll, FindIndex, etc
+            //var cheapBooks = books.FindAll(IsCheaperThan10Dollars);
 
+            // This lambda expression is the same as the predicate method below
+            // book goes to book.Price is less than 10
+            var cheapBooks = books.FindAll(b => b.Price < 10);
+
+            foreach (var book in cheapBooks)
+            {
+                Console.WriteLine(book.Title);
+            }
+        }
+
+        // predicate method
+        // using this method, FindAll method will iterate through list
+        // passing each item of list to method and return a boolean
+        // to see if item should be returned or not
+        static bool IsCheaperThan10Dollars(Book book)
+        {
+            return book.Price < 10;
         }
 
         //static int square(int number)
