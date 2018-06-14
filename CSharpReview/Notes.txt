@@ -1,1 +1,56 @@
-﻿
+﻿Events
+- A mechanism for communication between objects
+- Used in building Loosely Coupled Appplications (app where compoments, class are not tightly coupled together)
+- Helps extending applications
+
+public class VideoEncoder
+
+	public void Encode(Video video)
+
+		// Encoding logic
+
+		_mailService.Send(new Mail());
+			// what if you want to send text message now?
+
+		_messageService.Send(new Text());
+			// problem with this extra line, we had to change Encode message
+			// which means it needs to be recompiled and redeployed
+			// want to reduce the need to recompile, want minimum impact
+			// we also might break this with extra code
+
+We can use Events to fix this?  How?
+
+				calls VideoEncoded event						subscribes to event
+VideoEncoder											MailService
+	publisher												subscriber
+	event sender											event receiver
+	knows nothing about MailService						MessageService
+															can subscribe to VideoEncoder event
+
+New Code using Events
+
+public class VideoEncoder
+
+	public void Encode(Video video)
+
+		// Encoding logic
+
+		OnVideoEncoded();  // notify subscribers
+
+How to notify it sends a message
+	Envoking a method in subscriber
+
+	need contract between publisher and subscriber, a psecific signature
+
+public void OnVideoEncoded(object source, EventArgs e) - event handler
+	called by publisher when event is raised
+
+need this in MailService and MessageService
+
+Video Encoder does not know about MailService and MessageService
+all it knows is a method
+
+Delegates
+	- Agreement / Contract between Publisher and Subscriber
+	- Determines when to notify subscriber with signature
+
