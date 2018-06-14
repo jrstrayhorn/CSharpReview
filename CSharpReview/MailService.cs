@@ -9,9 +9,10 @@ namespace CSharpReview
     public class MailService
     {
         // Event Handler
-        public void OnVideoEncoded(object source, EventArgs e)
+        //public void OnVideoEncoded(object source, EventArgs e)
+        public void OnVideoEncoded(object source, VideoEventArgs e)
         {
-            Console.WriteLine("MailSerivce: Sending an email...");
+            Console.WriteLine($"MailSerivce: Sending an email... {e.Video.Title}");
         }
     }
 }

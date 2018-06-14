@@ -8,9 +8,9 @@ namespace CSharpReview
 {
     public class MessageService
     {
-        public void OnVideoEncoded(object source, EventArgs args)
+        public void OnVideoEncoded(object source, VideoEventArgs args)
         {
-            Console.WriteLine("Sending text message...");
+            Console.WriteLine($"Sending text message...{args.Video.Title}");
         }
     }
 }
