@@ -1,1 +1,11 @@
-﻿
+﻿What is LINQ?
+
+- Stands for: Language Integrated Query
+- Gives you the capability to query objects
+
+Can query
+- Objects in memory, eg collections (LINQ to Objects)
+- Databases (LINQ to Entities) / Entity Framework
+- XML (LINQ to XML)
+- ADO.NET Data Sets (LINQ to Data Sets)
+
