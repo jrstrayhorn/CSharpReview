@@ -1,1 +1,14 @@
-﻿
+﻿What are Extension Methods?
+
+Allow us to add methods to an existing class without
+- changing its source code, or
+- creating a new class that inherits from it
+
+Due to fact that instance methods take priority over extension methods,
+you should create them as a last resort
+
+You should create a new class that derives from class that you want to extend
+and place your new method there.
+
+Most of the time we will be using extension methods like from LINQ
+versus creating them

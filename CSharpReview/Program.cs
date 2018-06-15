@@ -10,7 +10,12 @@ namespace CSharpReview
     {
         static void Main(string[] args)
         {
-            
+            string post = "This is supposed to be a very long blog post blah blah...";
+            var shortenedPost = post.Shorten(7);
+            Console.WriteLine(shortenedPost);
+            Console.ReadKey();
         }
     }
+
+
 }
