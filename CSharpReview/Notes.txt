@@ -1,1 +1,23 @@
-﻿
+﻿Dynamic
+
+Progrmming Languages
+
+- Static language: C#, Java
+- Dynamic language: Ruby, JS, Pytho
+
+
+Type Resolution
+- State languages: at compile-time (when compile we get immediate feedback)
+- dyanmic language: at run time
+
+Benefits
+- Static languages: early feedback (compile-time)
+- Dynamic languages: easier and faster to code (need more unit tests)
+
+
+C# History
+- Started as a static language
+- .NET 4 added the dyanmic capability to improve interopabilty wit
+- COM
+- Dyanmic languages (IronPython)
+
