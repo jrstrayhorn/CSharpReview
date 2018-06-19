@@ -1,1 +1,11 @@
-﻿
+﻿Nullable Types
+
+VAlue Typs
+- cannot be null
+- bool hasAccess = true; //false
+
+Database
+
+Customers.Birthday (datetime NULL) - optional value
+
+to map to C# have to use Nullable Type
