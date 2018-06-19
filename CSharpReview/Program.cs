@@ -47,12 +47,25 @@ namespace CSharpReview
             // .LastOrDefault
             // .FirstOrDefault
 
+            // page functionas
             var pagedBooks = books.Skip(2).Take(3);
 
             foreach (var pagedBook in pagedBooks)
             {
                 Console.WriteLine(pagedBook.Title);
             }
+
+            var count = books.Count();
+
+            // returns book with highest price
+            var maxPriceBook = books.Max(b => b.Price);
+
+            var cheapBook = books.Min(b => b.Price);
+
+            // returns sum based on price
+            var totalPrices = books.Sum(b => b.Price);
+
+            var averagePrice = books.Average(b => b.Price);
         }
     }
 }
