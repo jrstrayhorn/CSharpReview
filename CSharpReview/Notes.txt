@@ -1,1 +1,58 @@
-﻿
+﻿Async/Await - Asynchronous Programming
+
+Sync Program Execution
+- Program executed line by line, one at a time
+- When a function is called, program wait until function returns
+
+Sync Program Execution
+1: ...
+2: TimeConsumingProcess(); like access database, web service (a delay)
+3: ...
+4: ...
+
+Async Program Execution
+- When a function is called, program execution continues on 
+
+Async Program Execution
+1: ...
+2: TimeConsumingProcess(callback);
+3: ..
+4...
+
+callback()
+{
+{
+}}
+
+improves smoothness/responsiveness of program because no blocking
+
+Real-World Example
+- Windows Media Player
+- Web Browser
+
+As a download happens, UI is still functional
+
+When to use this?
+- Access the web
+- Working with files and datbase
+- workfing with images
+
+HOw?
+- Tradiaiton
+	- Multi-threading
+	- Callbacks
+- New approach .NET 4.5
+	- Async / Await (Task based)
+
+Use Case
+-WPF with blocking operations, database, web calls, calendar, address book
+	- can improve responsiveness with async/await
+
+- In web app, during request it could get busy, lot of concurrent threads, server
+ could get unresponsive
+
+ or
+
+ use async/await to release threads so they don't get blocked.. can scale up
+
+ instead of scale out with multiple servers
