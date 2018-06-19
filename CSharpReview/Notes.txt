@@ -1,1 +1,16 @@
-﻿
+﻿Exception in C# is a class
+	property - called message
+
+	Source - namespace/assembly/DLL where exception happened
+
+	TargetSite - is where method happened
+
+	Stack Trace - shows sequence of methods until exception was thrown
+
+Our apps shouldn't crash
+We should always have a global exception handling block (try/catch)
+
+WPF should have a main method
+ASP.NET has a different way to do it
+
+Xamarin?
